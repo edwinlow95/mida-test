@@ -57,10 +57,6 @@ const triggerAA = (eventName, eventValue) => {
   mdq.push(["track", eventName, eventValue]);
 };
 
-window.addEventListener('DOMContentLoaded', () => {
-  window.mdq = [];
-});
-
 
 window.addEventListener('DOMContentLoaded', async () => {
   const volunteerListingFilters = document.querySelectorAll('body');
