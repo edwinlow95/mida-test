@@ -54,7 +54,7 @@ const triggerAA = (eventName, eventValue) => {
     }
   }
   
-  // window.mdq.push(["track", eventName, eventValue]);
+  window.mdq.push(["track", eventName, eventValue]);
 };
 
 window.addEventListener('DOMContentLoaded', () => {
