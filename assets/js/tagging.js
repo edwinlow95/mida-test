@@ -26,16 +26,18 @@ window.addEventListener('DOMContentLoaded', async () => {
       //   });
       // });
 
-      const showResultBtn = volunteerListingFilter.querySelector('.btn');
+      const showResultBtn = volunteerListingFilter.querySelectorAll('.btn');
       if (showResultBtn) {
-        showResultBtn.addEventListener('click', () => {
-          const eventName = 'show_result';
-          const componentName = 'Volunteer Listing';
-          const eventValue = {
+        showResultBtn.forEach((btn) => {
+          btn.addEventListener('click', () => {
+            const eventName = 'show_result';
+            const componentName = 'Volunteer Listing';
+            const eventValue = {
             'component_name': componentName,
           };
           triggerAA(eventName, eventValue);
-        });
+          });
+       });
       }
     });
   }
