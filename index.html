@@ -1,0 +1,82 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mida Marketing Tool – Test Site</title>
+  <meta name="description" content="Lightweight site to test Mida marketing tool instrumentation." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <!-- Mida Marketing Tool script (placeholder). Replace with your real snippet) -->
+  <!-- Example: <script defer src="https://cdn.mida.example/sdk.js" data-site-id="YOUR_SITE_ID"></script> -->
+   <!-- Anti-flickering script -->
+  <script>
+  var  timeout = 3000; // Timeout value to remove the flicker (in milliseconds)
+  !function(h,i,d,e){var  t,n=h.createElement("style");n.id=e,n.innerHTML="body{opacity:0}",h.head.appendChild(n),t=d,i.rmfk=function(){var  t=h.getElementById(e);t&&t.parentNode.removeChild(t)},setTimeout(i.rmfk,t)}(document,window,timeout,"abhide");
+  </script>
+
+  <!-- Mida A/B Testing Script (Place in <HEAD> for speed & no flicker) -->
+  <script type="text/javascript" async src="https://cdn.mida.so/js/optimize.js?key=8qbo2AG1YgeNOBnQaveNgl"></script>
+  <script defer src="/assets/js/mida-init.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Mida Marketing Tool – Test Site</h1>
+      <nav>
+        <a href="/index.html" aria-current="page">Home</a>
+        <a href="/thank-you.html">Thank you</a>
+        <a href="/privacy.html">Privacy</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <section class="hero">
+      <h2>Lightweight demo for tracking page views & events</h2>
+      <p>Use this page to verify that your Mida snippet loads, sends page views, and captures custom events.</p>
+      <div class="actions">
+        <button class="btn primary" id="btn-cta">Primary CTA</button>
+        <button class="btn" id="btn-secondary">Secondary CTA</button>
+      </div>
+    </section>
+    <section class="grid">
+      <article class="card">
+        <h3>Form submission test</h3>
+        <p>Submit the form to test a conversion event.</p>
+        <form id="demo-form">
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" required />
+          </label>
+          <button class="btn primary" type="submit">Submit</button>
+        </form>
+      </article>
+      <article class="card">
+        <h3>Outbound click test</h3>
+        <p>Clicking the link below should fire an <code>outbound_click</code> event.</p>
+        <p><a class="outbound" href="https://www.netlify.com/" target="_blank" rel="noopener">Visit Netlify</a></p>
+      </article>
+      <article class="card">
+        <h3>Page navigation test</h3>
+        <p>Navigate to the thank-you page to test page view tracking across routes.</p>
+        <p><a class="btn" href="/thank-you.html">Go to Thank You →</a></p>
+      </article>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Mida Test. <a href="/privacy.html">Privacy</a></p>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
