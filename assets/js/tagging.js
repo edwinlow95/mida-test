@@ -54,7 +54,7 @@ const triggerAA = (eventName, eventValue) => {
     }
   }
   
-  window.mdq.push(["track", eventName, eventValue]);
+  // window.mdq.push(["track", eventName, eventValue]);
 };
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -63,7 +63,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 window.addEventListener('DOMContentLoaded', async () => {
-  const volunteerListingFilters = document.querySelectorAll('.hero');
+  const volunteerListingFilters = document.querySelectorAll('body');
 
   if (volunteerListingFilters) {
     volunteerListingFilters.forEach((volunteerListingFilter) => {
